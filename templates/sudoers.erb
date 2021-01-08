@@ -3,12 +3,10 @@
 <%-
   tags = @tags.class == Array ? @tags.map{|x| x.sub(/$/, ':')}.join(' ') : "#{@tags}:"
 -%>
-
 <% if @comment then -%>
 #
 # <%= @comment %>
 <% end -%>
-
 <% if @users then -%>
 User_Alias  <%= @sane_name.upcase %>_USERS = <%= @users.class == Array ? @users.join(", ") : @users %>
 <% end -%>
